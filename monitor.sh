@@ -80,7 +80,7 @@ check_cpu() {
     fi
      
     # Comparisons
-    if [ "$cpu_usage" -ge "$CPU_ALERT_THRESHOLD" ]; then
+    if [ "${cpu_usage}" -ge "${CPU_ALERT_THRESHOLD}" ]; then
         send_email "WARNING: High CPU Usage" "CPU usage is at ${cpu_usage}% (Threshold: ${CPU_ALERT_THRESHOLD}%)"
     fi
 }
